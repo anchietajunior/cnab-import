@@ -1,24 +1,27 @@
-# README
+# CNAB import
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup the project
 
-Things you may want to cover:
+```sh
+bundle install
+```
 
-* Ruby version
+## Setup the database (SQLITE3)
 
-* System dependencies
+```sh
+rails db:create && rails db:migrate && rails db:seed
+```
 
-* Configuration
+## Run the project
 
-* Database creation
+```sh
+rails server
+```
 
-* Database initialization
+## Testing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rspec
+# or
+bundle exec rspec
+```

@@ -1,0 +1,7 @@
+<div class="page-content">
+  <h1>Import CNAB file</h1>
+  <%= form_for "", url: import_cnab_file_path, html: { multipart: true } do |form| %>
+    <%= form.file_field :cnab_file, class: "btn btn-primary" %>
+    <%= form.submit %>
+  <% end %>
+</div>

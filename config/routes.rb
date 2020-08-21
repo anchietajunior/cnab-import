@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'pages/home'          => 'pages#home', as: :home
+  post 'pages#import_file'  => 'imports#import_cnab_file', as: :import_cnab_file
+
+  root 'pages#home'
 end
