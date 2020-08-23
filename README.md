@@ -62,3 +62,8 @@ A view template should only refer to 1 object.
 
 - Services
 - Parsers
+
+## Project Possible Improvements
+
+- Implement Facade Patten
+- Remove n+1 queries
