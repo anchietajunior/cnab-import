@@ -8,12 +8,12 @@
 
 # Creating transactions
 
-Transaction.create!(id: 1, description: "Débito", kind: "Entrada", token: "+")
-Transaction.create!(id: 2, description: "Boleto", kind: "Saída", token: "-")
-Transaction.create!(id: 3, description: "Financiamento", kind: "Saída", token: "-")
-Transaction.create!(id: 4, description: "Crédito", kind: "Entrada", token: "+")
-Transaction.create!(id: 5, description: "Recebimento Empréstimo", kind: "Entrada", token: "+")
-Transaction.create!(id: 6, description: "Vendas", kind: "Entrada", token: "+")
-Transaction.create!(id: 7, description: "Recebimento TED", kind: "Entrada", token: "+")
-Transaction.create!(id: 8, description: "Recebimento DOC", kind: "Entrada", token: "+")
-Transaction.create!(id: 9, description: "Aluguel", kind: "Saída", token: "-")
+TransactionType.create!(id: 1, description: "Débito", kind: "Entrada", token: "+")
+TransactionType.create!(id: 2, description: "Boleto", kind: "Saída", token: "-")
+TransactionType.create!(id: 3, description: "Financiamento", kind: "Saída", token: "-")
+TransactionType.create!(id: 4, description: "Crédito", kind: "Entrada", token: "+")
+TransactionType.create!(id: 5, description: "Recebimento Empréstimo", kind: "Entrada", token: "+")
+TransactionType.create!(id: 6, description: "Vendas", kind: "Entrada", token: "+")
+TransactionType.create!(id: 7, description: "Recebimento TED", kind: "Entrada", token: "+")
+TransactionType.create!(id: 8, description: "Recebimento DOC", kind: "Entrada", token: "+")
+TransactionType.create!(id: 9, description: "Aluguel", kind: "Saída", token: "-")

@@ -1,0 +1,28 @@
+<div class="card stores">
+  <div class="card-header stores-header">
+    <h2>Stores</h2>
+    <%= link_to "Import cnab file", home_url, class: "btn btn-primary" %>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Owner name</th>
+          <th scope="col">Store transactions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @stores.each do |store| %>
+          <tr>
+            <td><%= store.name %></td>
+            <td><%= store.owner_name %></td>
+            <td>
+              <%= link_to "Ver mais", store_url(store.id), class: "btn btn-info" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

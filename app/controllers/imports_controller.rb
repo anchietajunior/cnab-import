@@ -1,12 +1,19 @@
 class ImportsController < ApplicationController
+  
+  before_action :check_cnab_file
+
   def import_cnab_file
-    file = File.read(params[:cnab_file])
-    p "READING FILE ========================================="
-    file.each_line do |line|
-      p "====================="
-      p line[62..80]
-      p "====================="
+    result = Transactions::Imports::TransactionsService.call(File.read(params[:cnab_file]))
+    if result.success?
+      redirect_to stores_url, notice: "Success"
+    else
+      redirect_to stores_url, notice: "Failure when importing"
     end
-    redirect_to home_path
+  end
+
+  private
+
+  def check_cnab_file
+    redirect_to home_url, notice: "Cnab file needed" unless params[:cnab_file].present?
   end
 end

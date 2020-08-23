@@ -1,0 +1,30 @@
+<div class="card panel-default store">
+  <div class="card-header stores-header">
+    <h2><%= @store.name %> | <%= @store.owner_name %></h2>
+    <%= link_to "Stores", stores_url, class: "btn btn-primary" %>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Transacation type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Card</th>
+          <th scope="col">Traded_at</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @store.transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.transaction_type.description %></td>
+            <td><%= transaction.amount %></td>
+            <td><%= transaction.cpf %></td>
+            <td><%= transaction.card %></td>
+            <td><%= transaction.traded_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
