@@ -17,7 +17,7 @@
       <tbody>
         <% @store.transactions.each do |transaction| %>
           <tr>
-            <td><%= transaction.transaction_type.description %></td>
+            <td><%= transaction.transaction_type.description %>(<%= transaction.transaction_type.token %>)</td>
             <td><%= transaction.amount %></td>
             <td><%= transaction.cpf %></td>
             <td><%= transaction.card %></td>
@@ -26,5 +26,8 @@
         <% end %>
       </tbody>
     </table>
+  </div>
+  <div class="card-footer text-muted">
+    Total balance: <%= @store.total_balance %>
   </div>
 </div>
